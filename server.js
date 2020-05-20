@@ -1,6 +1,10 @@
 const app = require('./config/custom-config');
-const routes = require('./src/app/routes/route')
+//const routes = require('./src/app/routes/route')
+// const controllers = require('./src/app/controllers/userController')
 
-const {Train} = require('./src/app/models')
-Train.create({number: '123', lineName: '123'});
-routes(app);
+// routes(app);
+
+const userRoute = require('./src/app/routes/users');
+app.use('', userRoute);
+
+module.exports = app;
