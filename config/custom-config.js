@@ -4,7 +4,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.listen(3000, ()=>{
+const PORT = 3000;
+const HOST = '0.0.0.0';
+
+app.listen(PORT, HOST, ()=>{
     console.info('Servidor iniciado na porta 3000');
 });
 
